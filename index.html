@@ -5,123 +5,109 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Asif S. - Faculty Portfolio</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         body {margin: 0; font-family: 'Roboto', sans-serif; background: #f4f6f9; color: #333;}
         .sidebar {width: 260px; background: #2c3e50; color: white; position: fixed; height: 100%; padding: 20px; display: flex; flex-direction: column; align-items: center;}
         .sidebar img {width: 120px; height: 120px; border-radius: 50%; border: 3px solid white; margin-bottom: 20px;}
         .sidebar h1 {font-size: 1.5em; margin: 10px 0 5px; text-align: center;}
-        .sidebar p {font-size: 0.9em; opacity: 0.8; text-align: center;}
         .nav-links {margin-top: 30px; width: 100%;}
-        .nav-links a {display: block; padding: 12px; text-decoration: none; color: white; border-radius: 5px; margin-bottom: 10px; transition: background 0.3s;}
+        .nav-links a {display: block; padding: 10px; text-decoration: none; color: white; border-radius: 5px; margin-bottom: 8px; transition: background 0.3s; font-size: 0.9em;}
         .nav-links a:hover {background: #34495e;}
-        main {margin-left: 280px; padding: 40px;}
-        section {background: white; padding: 30px; margin-bottom: 30px; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.05);}
-        section h2 {margin-top: 0; color: #2c3e50; border-bottom: 2px solid #f1f1f1; padding-bottom: 10px;}
-        .objective {margin-bottom: 15px; padding: 10px; border-left: 4px solid #2c3e50; background: #fafafa; border-radius: 5px;}
-        .objective-title {font-weight: 700; color: #2c3e50;}
-        .diagram {text-align: center; margin-top: 20px;}
-        .diagram img {max-width: 100%; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);}
-        footer {text-align: center; padding: 20px; color: #777; margin-left: 280px;}
-        @media screen and (max-width: 768px) {
-            .sidebar {position: relative; width: 100%; height: auto; flex-direction: row; justify-content: space-around;}
-            main {margin-left: 0; padding: 20px;}
-            footer {margin-left: 0;}
-        }
+        main {margin-left: 280px; padding: 30px;}
+        section {background: white; padding: 15px; margin-bottom: 20px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.05);}
+        section h2 {margin-top: 0; color: #2c3e50; border-bottom: 1px solid #f1f1f1; padding-bottom: 6px; font-size: 1.2em;}
+        .about-text {font-size: 1em; line-height: 1.4; color: #444; position: relative; padding-left: 12px; border-left: 3px solid #2980b9; background: #f9fcff; border-radius: 5px;}
+        .highlight {color: #2980b9; font-weight: 700;}
+        .skills-grid {display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px;}
+        .achievements-grid {display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px;}
+        .publications-grid, .projects-grid {display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 12px;}
+        .thesis-title {grid-column: 1 / -1; background: #fafafa; padding: 12px; border-radius: 6px; box-shadow: 0 1px 4px rgba(0,0,0,0.05); text-align: center; font-size: 1em; font-weight: bold; line-height: 1.4;}
+        .thesis-grid {display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px;}
+        .card {background: #fafafa; padding: 12px; border-radius: 6px; box-shadow: 0 1px 4px rgba(0,0,0,0.05); text-align: center; font-size: 0.9em; line-height: 1.3;}
+        .card i {font-size: 1.2em; margin-right: 8px; color: #2980b9;}
+        .row {display: flex; flex-wrap: wrap; gap: 20px;}
+        .half-section {flex: 1; min-width: 260px;}
     </style>
 </head>
 <body>
     <div class="sidebar">
-        <img src="asif photo.jpeg" alt="Profile Picture">
+        <img src="profile.jpg" alt="Profile Picture">
         <h1>Asif S.</h1>
-        <p>Engineering Manager | Web Application Development | Researcher</p>
-        <div class="nav-links">
-            <a href="#about">Research Statement</a>
-            <a href="#phd">Ph.D. Thesis</a>
+        <nav class="nav-links">
+            <a href="#about">About</a>
+            <a href="#skills">Technical Skills</a>
             <a href="#achievements">Achievements</a>
+            <a href="#thesis">Ph.D. Thesis</a>
             <a href="#publications">Publications</a>
-            <a href="#cv">CV</a>
-            <a href="#contact">Contact</a>
-        </div>
+            <a href="#projects">Projects</a>
+        </nav>
     </div>
 
     <main>
         <section id="about">
             <h2>About Me</h2>
-            <p>I am currently working as an Engineering Manager at Maersk, leading a team of 15 members in developing web application products. With over 12 years of industrial experience, I graduated from B.V. Bhoomreddi (now KLE Engineering College), Hubli, in 2013, completed my Master’s degree from Reva University in 2020, and earned my Ph.D. in 2025.</p>
+            <p class="about-text">
+                I am an <span class="highlight">Engineering Manager at Maersk</span>, leading a dynamic team of 15 professionals to craft cutting-edge web applications. With <span class="highlight">12+ years of industry expertise</span>, I bridge innovation and execution, driving impactful solutions in software architecture and AI-driven systems. My academic journey—from a B.Tech. at <span class="highlight">KLE Engineering College</span> to an M.Tech. at <span class="highlight">Reva University</span>, culminating in a <span class="highlight">Ph.D. (2025)</span>—reflects a deep commitment to research and teaching.
+            </p>
         </section>
 
-        <section id="phd">
+        <div class="row">
+            <section id="skills" class="half-section">
+                <h2>Technical Skills</h2>
+                <div class="skills-grid">
+                    <div class="card"><i class="fas fa-code"></i>Full Stack Development: JavaScript, HTML/CSS, Vue.js, Spring Boot, Kafka Streams</div>
+                    <div class="card"><i class="fas fa-tasks"></i>Agile Methodologies: Scrum, Kanban</div>
+                    <div class="card"><i class="fas fa-gauge-high"></i>Code Quality & Performance Optimization</div>
+                    <div class="card"><i class="fas fa-sync-alt"></i>Continuous Integration & Deployment</div>
+                    <div class="card"><i class="fas fa-chalkboard-teacher"></i>Technical Mentoring & Coaching</div>
+                    <div class="card"><i class="fas fa-users"></i>Cross-Functional Collaboration</div>
+                </div>
+            </section>
+
+            <section id="achievements" class="half-section">
+                <h2>Achievements</h2>
+                <div class="achievements-grid">
+                    <div class="card"><i class="fas fa-trophy"></i><strong>Ph.D. in Deep Learning (2025):</strong> Specialized in SQL injection vulnerability detection with AI methods.</div>
+                    <div class="card"><i class="fas fa-users"></i><strong>Leadership at Maersk:</strong> Manage a team of 15, delivering innovative web solutions.</div>
+                    <div class="card"><i class="fas fa-briefcase"></i><strong>Industry Experience:</strong> 12+ years in software architecture, engineering management, and research.</div>
+                    <div class="card"><i class="fas fa-book"></i><strong>Recognized Publications:</strong> Authored papers in reputed AI and cybersecurity journals and conferences.</div>
+                </div>
+            </section>
+        </div>
+
+        <section id="thesis">
             <h2>Ph.D. Thesis</h2>
-            <p><strong>Title:</strong> DEEP LEARNING-DRIVEN FRAMEWORK FOR SQL INJECTION VULNERABILITY DETECTION</p>
-            <div class="objective">
-                <div class="objective-title">Objective 1: Enhancement of Naïve Based Supervised Classification</div>
-                <p>Implemented low complexity supervised classification with missing value imputation, feature selection, and ranking to achieve efficient attribute-based classification and improved accuracy.</p>
+            <div class="thesis-title">DEEP LEARNING-DRIVEN FRAMEWORK FOR SQL INJECTION VULNERABILITY DETECTION</div>
+            <div class="thesis-grid">
+                <div class="card">Objective 1: Enhancement of Naïve Based supervised classification scheme with low complexity and attribute selection</div>
+                <div class="card">Objective 2: Enhancement of ensemble learning method with decision tree classifier and forward feature selection scheme along with boosting mechanism</div>
+                <div class="card">Objective 3: Enhancement of a hybrid CNN and LSTM based deep learning approach with BERT</div>
+                <div class="card">Objective 4: Enhancement of an advanced and integrated DL model combining CNN, BiLSTM, GRU and attention module.</div>
             </div>
-            <div class="objective">
-                <div class="objective-title">Objective 2: Enhanced Ensemble Learning with Boosting</div>
-                <p>Developed an ensemble learning method using decision tree classifiers and forward feature selection, leveraging boosting mechanisms to improve classification accuracy.</p>
-            </div>
-            <div class="objective">
-                <div class="objective-title">Objective 3: Hybrid CNN-LSTM Deep Learning with BERT</div>
-                <p>Presented an autoencoder-based unsupervised mechanism integrated with CNN and LSTM modules, combined with BERT embeddings, to improve pattern recognition and classification accuracy.</p>
-            </div>
-            <div class="objective">
-                <div class="objective-title">Objective 4: Advanced Integrated DL Model with Attention</div>
-                <p>Designed an advanced deep learning architecture combining CNN, BiLSTM, GRU, and attention modules to enhance pattern learning capability and improve SQL injection vulnerability detection.</p>
-            </div>
-            <div class="diagram">
-                <img src="research-framework-diagram.png" alt="Research Framework Diagram">
-            </div>
-        </section>
-
-        <section id="achievements">
-            <h2>Achievements</h2>
-            <ul>
-                <li>Ph.D. completed in 2025, specializing in deep learning for SQL injection vulnerability detection.</li>
-                <li>Leadership role at Maersk, managing a team of 15 members.</li>
-                <li>12+ years of diverse industrial experience in software engineering.</li>
-            </ul>
         </section>
 
         <section id="publications">
             <h2>Selected Publications</h2>
-            <div class="publication">
-                <div class="publication-title">SQL-CB-GuArd: A deep learning mechanism for structured query language injection attack detection</div>
-                <div class="publication-details">IAES International Journal of Artificial Intelligence (IJ-AI), 2025. <a href="http://doi.org/10.11591/ijai.v14.i1.pp337-349">DOI</a></div>
-            </div>
-            <div class="publication">
-                <div class="publication-title">A Supervised Ensemble Learning-Based Approach to Mitigate SQL Injection Attack on Smart City Data</div>
-                <div class="publication-details">International Journal of Engineering Trends and Technology, 2024. <a href="https://doi.org/10.14445/22315381/IJETT-V71I11P202">DOI</a></div>
-            </div>
-            <div class="publication">
-                <div class="publication-title">An Integrated Iterative Feature Selection and Naive Based Oriented Supervised Machine Learning Technique to Detect SQL Injection Attacks in IoT-based Communication</div>
-                <div class="publication-details">Journal of Theoretical and Applied Information Technology, 2023. <a href="https://www.jatit.org/volumes/Vol101No22/17Vol101No22.pdf">PDF</a></div>
-            </div>
-            <div class="publication">
-                <div class="publication-title">Stacked Autoencoder Based Deep Unsupervised Learning Approach for SQL Injection Attack Detection</div>
-                <div class="publication-details">Proceedings of the First Artificial Intelligence Summit on Smart Sustainable Society. <a href="https://link.springer.com/book/10.1007/978-981-97-7592-7">Conference Link</a></div>
-            </div>
-            <div class="publication">
-                <div class="publication-title">An Attention Module Integrated Deep Learning Architecture with BERT to Detect SQL Injection Attacks</div>
-                <div class="publication-details">Proceedings of the First Artificial Intelligence Summit on Smart Sustainable Society. <a href="https://link.springer.com/book/10.1007/978-981-97-7592-7">Conference Link</a></div>
+            <div class="publications-grid">
+                <div class="card"><i class="fas fa-book"></i>SQL-CB-GuArd: Deep learning mechanism for SQL injection detection – IJ-AI, 2025. <a href="http://doi.org/10.11591/ijai.v14.i1.pp337-349">DOI</a></div>
+                <div class="card"><i class="fas fa-book"></i>Supervised Ensemble Approach for SQL Injection Mitigation – IJETT, 2024. <a href="https://doi.org/10.14445/22315381/IJETT-V71I11P202">DOI</a></div>
+                <div class="card"><i class="fas fa-book"></i>Iterative Feature Selection & Naive-Based ML for SQL Injection Detection – JATIT, 2023. <a href="https://www.jatit.org/volumes/Vol101No22/17Vol101No22.pdf">PDF</a></div>
+                <div class="card"><i class="fas fa-microphone"></i>Stacked Autoencoder for SQL Injection Detection – AI Summit Conference, 2025. <a href="https://link.springer.com/book/10.1007/978-981-97-7592-7">Link</a></div>
+                <div class="card"><i class="fas fa-microphone"></i>Attention Module Integrated Deep Learning with BERT – AI Summit Conference, 2025. <a href="https://link.springer.com/book/10.1007/978-981-97-7592-7">Link</a></div>
             </div>
         </section>
 
-        <section id="cv">
-            <h2>Curriculum Vitae</h2>
-            <p>Download a complete CV in PDF format: <a href="cv.pdf">Download CV</a></p>
-        </section>
-
-        <section id="contact">
-            <h2>Contact</h2>
-            <p>Email: your.email@example.com</p>
-            <p>Twitter: <a href="https://twitter.com/yourprofile">@yourprofile</a></p>
-            <p>Google Scholar: <a href="https://scholar.google.com">Profile</a></p>
+        <section id="projects">
+            <h2>Key Projects</h2>
+            <div class="projects-grid">
+                <div class="card"><i class="fas fa-chart-line"></i><strong>Pricing Visibility Tool:</strong> Centralized platform for trade and corridor rates, surcharges, and analytics.</div>
+                <div class="card"><i class="fas fa-rocket"></i><strong>Web Application Optimization:</strong> Enhanced scalability, performance, and code quality.</div>
+                <div class="card"><i class="fas fa-laptop-code"></i><strong>Full Stack Product Development:</strong> Built maintainable apps using Vue.js and Spring Boot.</div>
+                <div class="card"><i class="fas fa-sitemap"></i><strong>Agile Transformation:</strong> Implemented Scrum/Kanban to streamline delivery cycles.</div>
+                <div class="card"><i class="fas fa-user-tie"></i><strong>Team Leadership:</strong> Mentored a team of 12–15 engineers delivering high-impact solutions.</div>
+            </div>
         </section>
     </main>
-
-    <footer>
-        &copy; 2025 Asif S. All Rights Reserved.
-    </footer>
 </body>
 </html>
